@@ -16714,3 +16714,136 @@ img {
 .no-cursor {
   cursor: not-allowed;
 }
+
+/* ------------------------------
+  Hot Collections - Keen Slider
+ ------------------------------ */
+
+ .hot-collections__slider {
+  position: relative;
+  width: 100%;
+ }
+ 
+ .hot-collections__slider .keen-slider {
+  overflow: hidden;
+ }
+
+ .hot-collections__slider .keen-slider__slider {
+  min-width: 0;
+ }
+
+ .hot-collections__slider .nft_coll {
+  height: 100%;
+ }
+
+ .hot-collections__slider .nft_wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ }
+
+/* Slider Arrows */
+
+.hot-collections__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #403f83;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  transition: all 300ms ease;
+}
+
+.hot-collections__arrow:hover {
+  background-color: #403f83;
+  color: white;
+}
+
+.hot-collections__arrow--left {
+  left: 10px;
+}
+
+.hot-collections__arrow--right {
+  right: 10px;
+}
+
+/* -----------------
+Hot Collections Skeletons
+------------------------ */
+
+.hot-collections__skeletons {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.hot-collections__skeleton {
+  width: calc(25% - 12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding-bottom: 16px;
+  overflow: hidden;
+}
+
+.hot-collection__avatar-skeleton {
+  margin-top: -30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tablet */
+
+@media (max-width:768px) {
+  .hot-collection__skeleton {
+    width: calc(50% - 8px);
+  }
+  
+  .hot-collection__skeleton:nth-child(n + 3) {
+    display: none;
+  }
+
+  .hot-collections__arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .hot-collections__arrow--left {
+    left: -10px;
+  }
+
+  .hot-collections__arrow--right {
+    right: -10px;
+  }
+}
+
+/* Phone */
+
+@media (max-width: 468px) {
+  .hot-collection__skeleton{
+    width: 85%;
+  }
+
+  .hot-collection__skeleton:nth-child(n + 2) {
+    display: none;
+  }
+
+  .hot-collections__arrow {
+    display: none;
+  }
+}
